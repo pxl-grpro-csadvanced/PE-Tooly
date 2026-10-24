@@ -31,6 +31,18 @@ namespace Tooly.WPF
         {
             string? name = nameTextBox.Text;
             string? category = categoryComboBox.SelectedValue.ToString();
+
+            if(string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("Naam mag niet leeg zijn.", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            if(string.IsNullOrEmpty(category))
+            {
+                MessageBox.Show("Categorie mag niet leeg zijn.", "Fout", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
         }
     }
 }
