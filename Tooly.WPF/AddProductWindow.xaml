@@ -1,0 +1,29 @@
+﻿<Window x:Class="Tooly.WPF.AddProductWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        Width="400" Height="250"
+        Title="T o o l y  -  Product toevoegen">
+    <DockPanel Grid.Column="1" Margin="10" >
+        <Grid ColumnDefinitions="*,10,*" DockPanel.Dock="Bottom">
+            <Button x:Name="cancelButton" Grid.Column="0"
+                    Padding="5"
+                    Content="Annuleren" Click="cancelButton_Click"/>
+            <Button x:Name="saveButton"  Grid.Column="2"
+                    Padding="5"
+                    Content="Toevoegen" Click="saveButton_Click"/>
+        </Grid>
+
+        <StackPanel x:Name="detailsStackPanel">
+            <Label Content="Naam:"/>
+            <TextBox x:Name="nameTextBox" Margin="0,0,0,10" />
+            <Label Content="Categorie:"/>
+            <ComboBox x:Name="categoryComboBox" Margin="0,0,0,10" >
+                <sys:String>Elektrisch</sys:String>
+                <sys:String>Handgereedschap</sys:String>
+                <sys:String>Tuin</sys:String>
+                <sys:String>Ladders</sys:String>
+            </ComboBox>
+        </StackPanel>
+    </DockPanel>
+</Window>
