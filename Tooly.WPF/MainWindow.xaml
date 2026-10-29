@@ -9,11 +9,13 @@
     <Grid ColumnDefinitions="2*,*" Margin="10">
         <ListBox x:Name="productsListBox" Margin="10" SelectionChanged="productsListBox_SelectionChanged"/>
         <DockPanel Grid.Column="1" Margin="10" >
-            <Button x:Name="addProductButton" 
-                    Padding="5"
-                    DockPanel.Dock="Bottom"
-                    Content="Product toevoegen" Click="addProductButton_Click"/>
-            <StackPanel x:Name="detailsStackPanel">
+            <StackPanel DockPanel.Dock="Bottom" x:Name="actionPanel">
+                <Button x:Name="addProductButton" 
+                  Padding="5"         
+                  Content="Product toevoegen" Click="addProductButton_Click" Margin="0,10,0,0"/>
+            </StackPanel>
+  
+            <StackPanel x:Name="detailsPanel">
                 <Label Content="Naam:"/>
                 <TextBox x:Name="nameTextBox" Margin="0,0,0,10" IsReadOnly="True"/>
                 <Label Content="Categorie:"/>
